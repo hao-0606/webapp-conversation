@@ -5,10 +5,10 @@ export const API_URL = `${process.env.NEXT_PUBLIC_API_URL}`
 export const APP_INFO: AppInfo = {
   title: 'AI 辯論',
   description: '丟出一個主題，讓 AI 進行辯論，並有評委進行評分',
-  copyright: '',
+  copyright: 'hao-0606',
   privacy_policy: '',
   default_language: 'zh',
-  disable_session_same_site: false, // set it to true if you want to embed the chatbot in an iframe
+  disable_session_same_site: true, // set it to true if you want to embed the chatbot in an iframe
 }
 
 export const isShowPrompt = false
