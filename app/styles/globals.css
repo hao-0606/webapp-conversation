@@ -1,3 +1,4 @@
+/* 1. Tailwind 導入（不要動） */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,16 +12,34 @@
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* 🎨 文字和背景顏色 */
+  /* 原始顏色設定（已停用）
+  --foreground-rgb: 0, 0, 0;             
+  --background-start-rgb: 214, 219, 220; 
+  --background-end-rgb: 255, 255, 255;   
+  */
 
+  --foreground-rgb: 255, 255, 255;        /* 白色文字 */
+  --background-start-rgb: 13, 27, 62;     /* 背景漸層起始色（深藍色） */
+  --background-end-rgb: 29, 78, 216;      /* 背景漸層結束色（中藍色） */
+
+  /*
   --primary-glow: conic-gradient(from 180deg at 50% 50%,
       #16abff33 0deg,
       #0885ff33 55deg,
       #54d6ff33 120deg,
       #0071ff33 160deg,
       transparent 360deg);
+  */
+
+  /* ✨ 主要光暈（藍色系）*/
+  --primary-glow: conic-gradient(from 180deg at 50% 50%,
+      #16abff33 0deg,    /* 改這些顏色碼 */
+      #0885ff33 55deg,
+      #54d6ff33 120deg,
+      #0071ff33 160deg,
+      transparent 360deg);
+
   --secondary-glow: radial-gradient(rgba(255, 255, 255, 1),
       rgba(255, 255, 255, 0));
 
@@ -40,7 +59,8 @@
   --card-border-rgb: 131, 134, 135;
 }
 
-/* @media (prefers-color-scheme: dark) {
+/* 深色模式（目前被註解掉）*/
+@media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
